@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.lock
+*.session-journal
+*.env
+*.envrc
+*.env.local
+
 # C extensions
 *.so
 

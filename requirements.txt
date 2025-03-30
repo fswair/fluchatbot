@@ -1,0 +1,8 @@
+pysondb
+pyrogram
+tgcrypto
+pyromod
+apscheduler
+geopy
+pydantic
+python-dotenv
