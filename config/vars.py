@@ -1,12 +1,11 @@
 import os
 import json
-import dotenv
 
-dotenv.load_dotenv()
+import os
 
-API_ID = os.environ.get("API_ID")
-API_HASH =  os.environ.get("API_HASH")
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
 
 with open("./config/data/languages.json") as f:
     LANGS = json.load(f)
