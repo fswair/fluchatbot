@@ -127,10 +127,8 @@ async def edit_profile(c: Client, m: Message):
     except Exception as e:
         return logger.error(f"Error in user input: {e}")
     
-    try:
-        age_keyboard = make_keyboard(preference.age, [])
-        print(age_keyboard)
-        age_ask: Message = await c.ask(m.chat.id, data["ask_age"], reply_markup=age_keyboard if age_keyboard else ReplyKeyboardRemove(), timeout=60)
+    try
+        age_ask: Message = await c.ask(m.chat.id, data["ask_age"], reply_markup=ReplyKeyboardRemove(), timeout=60)
         age = age_ask.text.strip()
         if not age.isdigit():
             return await m.reply_text(data["invalid_age"])
