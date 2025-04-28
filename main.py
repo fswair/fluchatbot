@@ -12,6 +12,8 @@ import os
 import asyncio
 import random
 
+os.mkdir("logs")
+
 WORKDIR = "sessions"
 APPNAME = "fluchatbot"
 LOGPATH = "logs/general.log"
